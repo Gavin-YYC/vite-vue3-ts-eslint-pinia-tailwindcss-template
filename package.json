@@ -1,8 +1,11 @@
 {
-  "name": "test-tailwind",
+  "name": "vite-vue3-ts-eslint-pinia-tailwindcss-template",
   "version": "1.0.0",
   "private": true,
-  "description": "test",
+  "description": "A modern Vue 3 template with Taro, Vite, Pinia, TypeScript, ESLint, and TailwindCSS for multi-platform app development",
+  "author": "",
+  "license": "MIT",
+  "keywords": ["taro", "vue3", "typescript", "vite", "pinia", "tailwindcss", "weapp", "h5", "alipay", "mini-program", "multi-platform"],
   "templateInfo": {
     "name": "vue3-pinia",
     "typescript": true,
@@ -26,14 +29,13 @@
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
-    "postinstall": "weapp-tw patch"
+    "postinstall": "weapp-tw patch",
+    "prepare": "husky"
   },
   "browserslist": [
     "defaults and fully supports es6-module",
     "maintained node versions"
   ],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
     "@tarojs/components": "4.0.12",
@@ -55,6 +57,8 @@
   "devDependencies": {
     "@babel/core": "^7.8.0",
     "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@tailwindcss/vite": "^4.1.6",
     "@tarojs/cli": "4.0.12",
     "@tarojs/vite-runner": "4.0.12",
@@ -67,6 +71,8 @@
     "eslint": "^8.12.0",
     "eslint-config-taro": "4.0.12",
     "eslint-plugin-vue": "^8.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
     "postcss": "^8.5.3",
     "sass": "^1.60.0",
     "stylelint": "^14.4.0",

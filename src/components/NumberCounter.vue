@@ -6,21 +6,21 @@
 
     <view class="flex space-x-3">
       <view
-        class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md transition-colors shadow-sm" 
+        class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md transition-colors shadow-sm"
         @tap="onSubtract"
       >
         -
       </view>
 
       <view
-        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition-colors shadow-sm" 
+        class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition-colors shadow-sm"
         @tap="onAdd"
       >
         +
       </view>
 
       <view
-        class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-md transition-colors shadow-sm" 
+        class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-md transition-colors shadow-sm"
         @tap="onReset"
       >
         Reset
@@ -33,35 +33,20 @@
   </view>
 </template>
 
-<script>
+<script setup lang="ts">
 import { useCounterStore } from '../stores/counter'
 
-export default {
-  setup() {
-    const counter = useCounterStore()
+const counter = useCounterStore()
 
-    const onAdd = () => {
-      counter.increment()
-    }
+const onAdd = () => {
+  counter.increment()
+}
 
-    const onSubtract = () => {
-      counter.decrement()
-    }
+const onSubtract = () => {
+  counter.decrement()
+}
 
-    const onReset = () => {
-      counter.reset()
-    }
-
-    return {
-      counter,
-      onAdd,
-      onSubtract,
-      onReset
-    }
-  }
+const onReset = () => {
+  counter.reset()
 }
 </script>
-
-<style>
-/* All styles now handled by Tailwind classes */
-</style>

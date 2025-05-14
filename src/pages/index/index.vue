@@ -9,7 +9,7 @@
       <view class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <view class="bg-white rounded-lg shadow-md p-6 transition-all hover:shadow-xl">
           <text class="text-xl font-semibold text-gray-800 mb-4">Counter Component</text>
-          <Counter />
+          <NumberCounter />
         </view>
 
         <view class="bg-white rounded-lg shadow-md p-6 transition-all hover:shadow-xl">
@@ -30,17 +30,8 @@
   </view>
 </template>
 
-<script>
-import Counter from '../../components/Counter.vue'
-import FeatureCard from '../../components/FeatureCard.vue'
-import ColorPalette from '../../components/ColorPalette.vue'
-
-export default {
-  name: 'Index',
-  components: {
-    Counter,
-    FeatureCard,
-    ColorPalette
-  }
-}
+<script setup lang="ts">
+import NumberCounter from '@/components/NumberCounter.vue'
+import FeatureCard from '@/components/FeatureCard.vue'
+import ColorPalette from '@/components/ColorPalette.vue'
 </script>
